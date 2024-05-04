@@ -2,12 +2,22 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #121111; /* Warna latar belakang di luar kotak profil */
+  color: #333;
 }
 
 .container {
   max-width: 800px;
   margin: 20px auto;
-  padding: 0 20px;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #007bff,
+    #000
+  ); /* Gradasi dari biru ke hitam */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
 }
 
 header h1 {
@@ -15,29 +25,45 @@ header h1 {
 }
 
 .profile {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.profile img {
-  width: 200px;
-  height: 200px;
+.profile-info img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.details,
-.summary {
-  margin-top: 20px;
+.profile-info img:hover {
+  transform: scale(1.1);
+}
+
+.profile h2 {
+  color: white;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
 }
 
 .details h2,
 .summary h2 {
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid white;
   padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.details p,
-.summary p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
